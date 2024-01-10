@@ -1,0 +1,253 @@
+/*elements*/
+body{
+	overflow-y: hidden;
+	background-color: rgb(100,100,255);
+}
+li{
+	float: left;
+	list-style-type: none;
+	position: relative;
+}
+ul{
+	width: 40vw;
+	height: 60vh;
+	border:5px solid rgb(0,0,0);
+	background-color: rgb(255,10,10);
+	box-sizing: border-box;
+	margin-left: 30vw;
+	margin-top: 20vh;
+}
+/*id's*/
+#TimerHolder,#StartButton{
+	min-width: 20vw;
+	width: 20vw;
+	height: 110px;
+	border:none;
+	border-radius: 0 0 50px 50px;
+	padding:10px;
+	position: absolute;
+	left: 40vw;
+	top: -2px;
+	box-sizing: border-box;
+	background-color: rgb(255,255,255);
+	text-align: center;
+	color: rgb(100,100,255);
+	cursor: pointer;
+}
+#StartButton{
+	font-size: 60px;
+	-webkit-text-stroke:2px rgb(100,100,255);
+	-webkit-text-fill-color:transparent;
+	font-family: 'comic sans MS';
+	padding-top: -10px;
+}
+#Timer{
+	font-size: 85px;
+	font-family: 'pixel';
+	padding: 0px;
+	margin-top: -20px;
+}
+#stopButtonHolder{
+	position: absolute;
+	left: 40vw;
+	bottom: 20vh;
+	width: 20vw;
+	height: 100px;
+	box-sizing: border-box;
+}
+#StopButton{
+	width: 50%;
+	height: 100%;
+	border-radius: 50% 50% 0 0;
+	border:none;
+	cursor: pointer;	
+	transition: width 1s;
+	background-color: rgb(240,0,0);
+	font-size: 60px;
+	margin-left: 25%;
+	border: 1px solid rgb(0,0,0);
+	border-bottom: none;
+	color:rgb(255,255,255);
+	text-align: center;
+}
+#StopButton:focus{
+	outline:none;
+}
+#StopButton:hover{
+	position: absolute;
+	bottom: 0px;
+	height: 97%;
+}
+#table{
+	position: absolute;
+	bottom: 0px;
+	width: 30vw;
+	height: 20vh;
+	border:1px solid rgb(91,57,38);
+	background-color: rgb(91,57,38);
+	z-index: -2;
+	left:35vw;
+	right:35vw;
+	box-sizing: border-box;
+	border:1px solid rgb(0,0,0);
+}
+#circle{
+	width: 50%;
+	height: 50vw;
+	border:5px solid rgb(255,255,255);
+	border-radius: 50%;
+	position: absolute;
+	bottom: -55%;
+	left: 25vw;
+}
+#switchScreen_nb{
+	width: 22vw;
+	position: absolute;
+	left: 39%;
+	top: 25%;
+	height: 80px;
+	background-color: transparent;
+	-webkit-text-stroke: 1px rgb(255,255,255);
+	font-size: 3em;
+	color:transparent;
+	border:none;
+	transition: border 1s, background-color 1s;
+	cursor: pointer;
+	font-family: 'verdana';
+	display: block;
+}
+#switchScreen_nb:hover, #switchScreen:focus{
+	outline:none;
+	border:1px solid rgb(255,255,255);
+	background-color: rgb(100,120,255);
+}
+#switchScreen_bn{
+	border:none;
+	background-color: transparent;
+	color: red;
+	width: 30vw;
+	height: 40px;
+	font-size: 30px;
+	position: absolute;
+	left: 35vw;
+	bottom: 10px;
+	transition: border 1s;
+	cursor: pointer;
+}
+#switchScreen_bn:hover,#switchScreen:focus{
+	outline: none;
+	border: 1px solid rgb(255,10,10);
+}
+#triangle1{
+	top: 10px;
+}
+#triangle2{
+	top: 130px;
+}
+#triangle3{
+	top:250px;
+}
+#paralel1{
+	top:-30px;
+}
+#paralel2{
+	top:-73px;
+}
+#paralel3{
+	top:-117px;
+}
+#thinparalel1{
+	position: relative;
+	top:-10px;
+}
+#thinparalel2{
+	position: relative;
+	top:-33px;
+}
+#thinparalel3{
+	position: relative;
+	top:-57px;
+}
+/*classes*/
+.dissapear{
+	animation: dissapear 2s linear 1 forwards 3s;
+	transition: opacity 1s;
+}
+.triangle{
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+ 	border-bottom: 100px solid rgb(0,162,232);
+ 	color: rgb(255,255,255);
+ 	text-align: center;
+ 	position: absolute;
+ 	left: -5px;
+}
+.paralellogram{
+	width: 200px;
+	background-color: rgb(0,162,232);
+	height: 100px;
+	transform: skew(27deg);
+	display: block;
+	position: relative;
+	left: 90px
+}
+.ThinnerParalellogram{
+	width: 140px;
+	background-color: rgb(0,162,232);
+	height: 100px;
+	transform: skew(27deg);
+	display: block;
+	position: relative;
+	left: 110px;
+}
+.text0{
+	color:rgb(255,10,10);
+	font-size: 50px;
+	position: relative;
+	left: -8px;
+	top: -20px;
+	font-family: 'pixel';
+}
+.text1{
+	font-size: 40px;
+	color:rgb(255,10,10);
+	transform:skew(-27deg);
+	text-align: center;
+	font-family: 'arial';
+	padding-top: 25px;
+}
+.text2{
+	transform: skew(-27deg);
+	font-family: 'arial';
+	font-size: 20px;
+	text-align: center;
+	padding-left: 5px;
+	padding-top: 40px;
+	position: relative;
+	-webkit-text-fill-color:rgb(255,10,10);
+}
+/*keyframes*/
+@keyframes dissapear{
+	0%{
+		opacity: 1;
+	}
+	25%{
+		opacity: 0.75;
+	}
+	50%{
+		opacity: 0.50;
+	}
+	75%{
+		opacity: 0.25;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+/*fontfaces*/
+@font-face{
+	font-family: 'pixel';
+	src: url(pixel.otf);
+}

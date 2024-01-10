@@ -1,0 +1,10 @@
+het idee: 
+
+je drukt op een knop, en dan valt er een bal ofzo vanaf boven het scherm naar de bodem van de scherm. 
+dit kan je dan zelf instellen, de zwaartekracht van de planeet, maar ook costumiseren naar een andere n/m2 
+
+
+technische uitwerkingen: 
+
+ik moet een formule uitwerken waarin de n/m2 gelijk komt te staan aan de snelheid waarmee hij naar beneden wordt getrokken. het naar beneden trekken kan zo:
+ik gooi er een bepaalde jQuery animatie op die hem vanaf -100 naar 0 brengt. de speed parameter kan ik dan gebruiken met de n/m2. de n/m2 komt ook uit de parameters van de buttons.

@@ -1,0 +1,91 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0;
+	overflow: hidden;
+	padding:0;
+}
+main{
+	background-color: rgb(255,255,255);
+}
+form{
+	display: block;
+	width: 100vw;
+}
+.inputGroup p{
+	display: inline-block;
+	margin-left: 15%;
+}
+.inputGroup input, select{
+	float: right;
+	margin-right: 40%;
+	width: 30%;
+	height: 40px;
+	border-radius: 5px;
+	border:1px solid grey;
+	padding: 10px;
+	background-color: #f3f5f4;
+}
+#blue{
+	color: #6da0bd;
+}
+h1{
+	padding: 20px;
+	font-family: palatino Linotype;
+}
+input[type="submit"]{
+	height: 30px;
+}
+#apart_geval input[type="radio"]{
+	display: inline;
+	margin-left:100px;
+}
+#apart_geval p{
+	width: 300px;
+	display: inline;
+}
+#apart_geval{
+	margin-left:15%;
+}
+#longText{
+	margin-left:120px;
+}
+#radio0{
+	margin-left:-60px;
+	display: inline;
+}
+#outerdiv1{
+	background-color: rgb(216,232,245);
+	outline:2px solid rgb(9,11,171);
+	border:2px solid rgb(241,247,159);
+	width: 98vw;
+	height: 95vh;
+	position: absolute;
+	left: 1vw;
+	top: 2.5vh;
+}
+#outerdiv2{
+	height: 100%;
+	background-color: rgb(255,255,255);
+	width: 70%;
+	position: absolute;
+	left: 15vw;
+}
+#outerdiv3{
+	height: 100%;
+	width: 95%;
+	margin-left: 2.5%;
+	position: relative;
+	top: -19px;
+	box-shadow: -4px -2px lightgrey;
+}
+#innerdiv{
+	margin-top:-30px;
+}
+#acomplishing{
+	margin-right:40%;
+}
+hr{
+	border:1px solid rgb(255,255,255);
+}

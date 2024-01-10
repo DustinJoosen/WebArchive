@@ -1,0 +1,165 @@
+.contactInformationTexts{
+	list-style-type:none;
+	display: inline-block;
+	border-right:1px solid rgb(193,206,204);
+	padding: 5px 10px;
+	font-family: verdana;
+}
+.contactInformationTexts:last-child{
+	border-right: none;
+}
+.contactInformationTexts:first-child{
+	margin-left: 50px;
+}
+#contactInformation{
+	width: 100vw;
+	position: absolute;
+	top:0;
+	left: 0;
+	background-color:rgb(30,42,52);
+	color:rgb(193,206,204);
+}
+#contactInformation .fas, .far{
+	color:rgb(200,0,0);
+}
+#requestButton{
+	color:rgb(255,255,255);
+	float: right;
+	height: 40px;
+	margin-right:130px;
+	margin-top:-55px;
+	border:1px solid rgb(62,102,182);
+	padding: 5px 15px;
+	border-radius: 50px;
+	background-color: rgb(62,102,182);
+	font-family: verdana;
+	cursor: pointer;
+}
+#requestButtonText{
+	margin-top:-5px;
+}
+nav{
+	position: absolute;
+	top: 61.5px;
+	left: 0;
+	width: 100%;
+	height: 123px;
+	background-color: rgba(100,100,100,0.6);
+	z-index: 3;
+}
+#transportText{
+	font-family: Arial;
+	z-index:2;
+	color:rgb(255,255,255);
+	font-size: 30px;
+	margin-left: 100px;
+}
+.navigationHyperLink{
+	text-decoration: none;
+	list-style-type:none;
+	color:rgb(255,255,255);
+	display: inline-block;
+	font-family: Manjari;
+	font-size:18px;
+	margin-left: 25px;
+	margin-top:-15px;
+	float: right;
+	transition: color 1s;
+}
+.navigationHyperLink:first-child{
+	margin-right: 70px;
+}
+.navigationHyperLink:hover{
+	color:rgb(200,0,0);
+}
+main{
+	margin-top:185px;
+	margin-left: 100px;
+}
+#wallpaperHolder{
+	width: 100vw;
+	position: absolute;
+	top: 61.5px;
+	left: 0;
+	height: 1200px;
+	background-image:url("backgroundImage.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+body{
+	overflow-x:hidden;
+}
+.advertisementText{
+	color:rgb(255,255,255);
+	font-family: arial;
+	margin-left:100px;
+}
+#advertisementTextBig{
+	margin-top: 235px;
+	font-size: 45px;
+}
+#advertisementTextBig span{
+	font-size:52px;
+}
+.sliderPointer{
+	width: 50px;
+	height: 49px;
+	position: absolute;
+	top:400px;
+	background-color: rgb(54,66,78);
+	opacity: 0.9;
+	cursor: pointer;
+}
+#sliderPointer1{
+	left: 0;
+	border-radius: 0 5px 5px 0;
+}
+#sliderPointer2{
+	right: 0;
+	border-radius: 5px 0 0 5px;
+}
+#sliderPointer1Sign, #sliderPointer2Sign{
+	color:rgb(255,255,255);
+	font-size:40px;
+	padding:10px;
+	font-family: Manjari;
+	line-height: 35px;
+}
+#transportTypeHolders{		/*Holder of all transport type holders*/
+	background-color: red;
+	width: 80vw;
+	height: auto;
+	min-height: 400px;
+	position: absolute;
+	left: 10vw;
+	top:100vh;
+	z-index: 999;
+	display: flex;
+}
+.transportTypeHolder{		/*transport type holders*/
+	justify-content: space-between;
+	height: 400px;
+	width: 33.3%;
+	display: inline-block;
+}
+#transportTypeHolder_sea, #transportTypeHolder_train{ 	/*odd holders*/
+	background-color: rgb(58,67,82);
+}
+#transportTypeHolder_air{					/*even holders*/
+	background-color: rgb(61,102,184);
+}
+.transportTypeHolderText{		/*The lorum ipsum in the text holders*/
+	color: rgb(255,255,255);
+	text-align: center;
+	font-family: arial;
+	font-size: 15px;
+}
+.transportTypeHolderHeader{		/*Header of the transport types*/
+	color:white;
+	text-align:center;
+	font-family: Verdana;
+}
+#transportTypeHolders .fas{
+	color:rgb(255,255,255);
+	font-size: 50px;
+}

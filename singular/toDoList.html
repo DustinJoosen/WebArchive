@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+	<html lang="du">
+		<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+			<script>
+				$(document).ready(function(){
+					$("#add").on("click", function(){
+						if($("#item").val()!=""){
+							var item = $("#item").val()
+							var elem = $("<li></li>").text(item);			
+							$("#list").append(elem);
+							$("#item").val("");
+						}
+					})
+					$("#item").keypress(function(e){
+						if(e.which==13){
+							$("#add").trigger("click");
+						}
+					})
+				})
+			</script>
+			<title>To Do List</title>
+		</head>
+		<body>
+			<h1>To Do List</h1>
+			<input type="text" id="item"/>
+			<button type="button" id="add">Add</button>
+			<ol id="list"></ol>
+		</body>
+	</html>

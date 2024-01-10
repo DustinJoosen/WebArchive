@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="du">
+<head>
+	<title>Calculator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var sum = "";
+			var ans = 0;
+			var answer;
+			$(".partOfSum").click(function(){
+				sum += this.value;					//constructing the new sum.
+				updateSum(sum);
+				console.log(sum);
+			})
+			$("#calculate").on("click",function(){
+				//executing the sum with the eval statement. and passing the value down to the answer variable//
+				answer = eval(sum);
+				$("#answer").text(answer);		
+				sum = answer;
+				updateSum(sum);	
+				console.log(answer);				//calculate, set the answer, and giving ans the value of answer.//
+				ans = answer;
+			})
+			$("#reset").on("click",function(){
+				reset();
+			})
+			$("#delete").on("click",function(){
+				sum = sum.slice(0,-1);				//deleting the last digit of the sum and updating it//
+				updateSum(sum);
+			})
+			$("#ans").on("click",function(){
+				sum += ans;							//adding the previous answer to the sum and updating it//
+				updateSum(sum);			
+			})
+			function reset(){
+				sum = "";
+				updateSum(sum);
+			}
+			function updateSum(x){
+				$("#answer").text(x);
+			}
+		})
+	</script>
+	<style>
+		table{
+			border:2px solid rgb(255,0,0);
+			width: 30%;
+			max-width: 30vw;
+			margin-left: 35vw;
+			margin-top:15vh;
+			border-collapse: collapse;
+			font-size: 30px;
+			background-color: lightblue;
+		}
+		td{
+			height: 10vh;
+			width: 7.5vw;
+			min-width: 100px;
+			max-width: 7.5vw;
+			overflow-x:hidden;
+
+		}
+		button{
+			width: 80%;
+			height: 80%;
+			cursor: pointer;
+			font-size: 30px;
+			width: 5vw;
+			margin-left: 1.25vw;
+			border:2px solid rgb(255,0,0);
+			background-color: rgb(255,255,255);
+			color:rgb(255,0,0);
+		}
+		*{
+			font-family: 'arial';
+			box-sizing: border-box;
+		}
+		p{
+			border:2px solid rgb(255,0,0);
+			height: 80%;
+			width: 80%;
+			background-color: rgb(255,255,255);
+			margin-left: 10%;
+			color:rgb(255,0,0);
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<table>
+
+		<tr>
+			<td colspan = "3" rowspan="2"><p id="answer"></p></td>
+			<td><button id="reset">C</button></td>
+		</tr>
+
+		<tr>
+			<td><button id="delete"><</button></td>
+		</tr>
+
+		<tr>
+			<td>
+				<button class="partOfSum" value="7">7</button>
+			</td>
+			<td>
+				<button class="partOfSum" value="8">8</button>
+			</td>
+			<td>
+				<button class="partOfSum" value="9">9</button>
+			</td>
+			<td>
+				<button class="partOfSum" value="+">+</button>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<button class="partOfSum" value="4">4</button>
+			</td>
+			<td>
+				<button class="partOfSum" value="5">5</button>	
+			</td>
+			<td>
+				<button class="partOfSum" value="6">6</button>
+			</td>
+			<td>
+				<button class="partOfSum" value="-">-</button>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<button class="partOfSum" value="1">1</button>	
+			</td>
+			<td>
+				<button class="partOfSum" value="2">2</button>
+			</td>
+			<td>
+				<button class="partOfSum" value="3">3</button>
+			</td>
+			<td>
+				<button class="partOfSum" value="*">*</button>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<button class="partOfSum" value="0">0</button>
+			</td>
+			<td>
+				<button id="ans">A</button>
+			</td>
+			<td>
+				<button id="calculate" value="=">=</button>
+			</td>
+			<td>
+				<button class="partOfSum" value="/">/</button>
+			</td>
+		</tr>
+
+	</table>
+</body>
+</html>

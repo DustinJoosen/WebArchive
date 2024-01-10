@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="now.css">
+	<title>Now</title>
+</head>
+<body id="body">
+	<div id="LevelScreen" style="display: block">
+		<div id="TimerHolder">
+			<p id="Timer">0</p>
+		</div>
+		<div id="circle"></div>
+		<div id="table"></div>
+		<div id="Buttons">
+			<div id="StartButtonHolder">
+				<button type="button" id="StartButton" class="timerButton" onclick="timer()">Start</button>
+			</div>
+			<div id="stopButtonHolder">
+				<button type="button" id="StopButton" class="timerButton" onclick="stopButton()">Stop</button>
+			</div>
+		</div>
+		<button type="button" id="switchScreen_nb" onclick="setPointsOrder('none','block')">ScoreBoard</button>
+	</div>
+	<div id="ScoreScreen" style="display: none;">
+		<ul>
+			<li>
+				<div id='triangle1' class="triangle"><p class="text0">1</p></div>
+				<div id='triangle2' class="triangle"><p class="text0">2</p></div>
+				<div id='triangle3' class="triangle"><p class="text0">3</p></div>
+			</li>
+			<li>
+				<div id='paralel1' class="paralellogram"><p class="text1">Player 1</p></div><br/>
+				<div id='paralel2' class="paralellogram"><p class="text1">Bot 1</p></div><br/>
+				<div id='paralel3' class="paralellogram"><p class="text1">Bot 2</p></div><br/>
+			</li>
+			<li>
+				<div id='thinparalel1' class="ThinnerParalellogram"><p id="Player1_Points" class="text2">900 points</p></div><br/>
+				<div id='thinparalel2' class="ThinnerParalellogram"><p id="Player2_Points" class="text2">900 points</p></div><br/>
+				<div id='thinparalel3' class="ThinnerParalellogram"><p id="Player3_Points" class="text2">900 points</p></div><br/>
+			</li>
+		</ul>
+		<h1 id="Points"></h1>
+		<button type="button" id="switchScreen_bn" onclick="setPointsOrder('block','none')">Back to level screen</button>
+	</div>
+	<script src="now.js"></script>
+</body>
+</html>

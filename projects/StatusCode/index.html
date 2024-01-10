@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Status Code</title>
+		<style>
+			body{
+				background:#333;
+			}
+			#iframe{
+				background-color: rgba(255,255,255);
+				width:60%;
+				height: 600px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top:60px;
+				border:1px solid black;
+			}
+		</style>
+		<link rel="icon" href="icon.ico"/>
+	</head>
+	<body>
+		<iframe id="iframe"></iframe>
+
+		<script>
+			function get_code(){
+				var code = prompt("What status code do you want to know about?");
+
+				if(code == ""){
+					return get_code();
+				}
+				else{
+					return code;
+				}
+			}
+
+			var code = get_code();
+			document.getElementById("iframe").src = "https://httpstatuses.com/" + code;
+		</script>
+	</body>
+</html>

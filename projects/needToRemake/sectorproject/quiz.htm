@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="webquiz, audio, audioquiz, javascriptquiz"/>
+	<meta name="description" content="an audioquiz powered by javascript. for a schoolproject"/>
+	<meta name="author" content="Dustin joosen"/>
+<meta name="description" content="reserve versie, het liefst niet gebruiken!!! alleen alshet echt niet anders kan..."/>
+	<!--<meta http-equiv="refresh" content="3"/>-->
+	<title>sectorproject quiz</title>
+<script src="questions.js"/></script>
+<script src="answer_function.js"/></script>
+<link rel="stylesheet" href="styling.css"/>
+</head>
+<body>
+
+<h2 id="Question">Audiovisueel quiz</h2>
+<button type="button" onclick="start()" id="start">start the quiz</button>
+	<div id="mediaHolder">
+		<img id="image" class="img" src="images/startimage.jpg" />                          
+		<video onclick="playPause()" id="video" controls>
+			<source src="" type="video/mp4"/>        		
+				error 3
+		</video>
+	</div>
+	<p id="credits">Dustin Joosen en Wim den hertog.<span id="date"></span></p>
+<div style="display:none" id="quiz">
+	<div id="correctAnswer" onclick="grassTastesBad()">
+		<pre><p id="7" onclick="grassTastesBad()"><br/><br/><br/><br/>
+		een extra long shot is extreem ruim shot. mensen zijn nauwelijks zichtbaar (bijvoorbeeld in een drone opname). 
+		in een long shot is iedereen goed zichtbaar maar de opname is wel ruim. 
+		in een knee shot is een persoon vanaf de knie gefilmd. 
+		in een medium shot is de persoon vanaf de middel gekaderd. 
+		in een medium close-up zie je de persoon meestal vanaf de borstkas. 
+		een close up is alleen het hoofd. 
+		een big close up is een deel van het hoofd
+	</p></pre>
+	</div>
+	<textarea id="textarea">error 8</textarea>
+	<div id="buttons">
+		<button id="button1" type="button" onclick="Answer1()"><p id="ans1">error 8</p></button><br/>
+		<button id="button2" type="button" onclick="Answer2()"><p id="ans2">error 8</p></button><br/>
+		<button id="button3" type="button" onclick="Answer3()"><p id="ans3">error 8</p></button><br/>
+	</div>
+	<button type="button" onclick="next()" id="nextButton"><p> next question</p></button>
+	<p id="questionCounter">vraag 1 van de 13</p>
+	<p style="font-size:200px;\" id="error29">error 29</p>
+	
+	<img src="images/uitroepteken.png" style="display: none ;position:absolute;top: 0;right: 0;" id="kelvinZuigtPiemols" onclick="kelvinIsPanseksueel()"	height="50px" width="50px"/>
+</div>
+<script>
+	//variables
+var counter = 0;
+
+	//Functions
+function start(){
+document.getElementById('quiz').style.display ="block";
+document.getElementById('start').style.display ="none";
+document.getElementById('Question').innerHTML = Q1.question;
+document.getElementById('ans1').innerHTML = Q1.answer1;
+document.getElementById('ans2').innerHTML = Q1.answer2;
+document.getElementById('ans3').innerHTML = Q1.answer3;
+document.getElementById('Question').style.position ="fixed";
+document.getElementById('Question').style.bottom = "0";
+document.getElementById('textarea').innerHTML = Q1.information;
+document.getElementById('credits').style.display = "none";
+document.getElementById('image').src ="images/image1.png";
+//document.getElementById('video').src= "images/video1.mp4";
+document.getElementById('image').style.display = "block";
+document.getElementById('video').style.display = "none";
+console.log("je bent nu bij vraag 1");
+}
+
+function playPause(){
+	var video = document.getElementById('video');
+	if(video.paused){
+		video.play();
+	}
+	else{
+		video.pause();
+	}
+}
+function kelvinIsPanseksueel(){
+	document.getElementById('correctAnswer').style.display = "block";
+}
+function grassTastesBad(){
+	document.getElementById('correctAnswer').style.display = "none";
+}
+function next(){
+var logCounter = counter + 1;
+counter++;
+document.getElementById('questionCounter').innerHTML = "vraag " + (counter+1) + " van de 13";
+
+if(counter==1){																//vraag is counter +1
+document.getElementById('Question').innerHTML = Q2.question;
+document.getElementById('ans1').innerHTML = Q2.answer1;
+document.getElementById('ans2').innerHTML = Q2.answer2;
+document.getElementById('ans3').innerHTML = Q2.answer3;
+document.getElementById('textarea').innerHTML = Q2.information;
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+//document.getElementById('video').src = "images/video2.mp4";
+//document.getElementById('image').src = "images/image2.jpg";
+//document.getElementById('video').style.display = "none or block";
+//document.getElementById('image').style.display = "none or block";
+document.getElementById('Question').style.width= "50%"
+document.getElementById('Question').style.marginLeft = "15%"
+}
+if(counter==2){																
+document.getElementById('Question').innerHTML = Q3.question;
+document.getElementById('ans1').innerHTML = Q3.answer1;
+document.getElementById('ans2').innerHTML = Q3.answer2;
+document.getElementById('ans3').innerHTML = Q3.answer3;
+document.getElementById('textarea').innerHTML = Q3.information
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+document.getElementById('video').src = "images/video3.mp4";
+//document.getElementById('image').src = "images/image3.jpg";
+document.getElementById('video').style.display = "block";
+document.getElementById('image').style.display = "none";
+document.getElementById('mediaHolder').style.borderRadius = "0px";
+document.getElementById('Question').style.width= "40%"
+document.getElementById('Question').style.marginLeft = "20%"
+}
+if(counter==3){
+document.getElementById('Question').innerHTML = Q4.question;
+document.getElementById('ans1').innerHTML = Q4.answer1;
+document.getElementById('ans2').innerHTML = Q4.answer2;
+document.getElementById('ans3').innerHTML = Q4.answer3;
+document.getElementById('textarea').innerHTML = Q4.information
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+//document.getElementById('video').src = "images/video4.mp4";
+document.getElementById('image').src = "images/image4.png";
+document.getElementById('video').style.display = "none";
+document.getElementById('image').style.display = "block";
+document.getElementById('mediaHolder').style.borderRadius = "25px";
+document.getElementById('Question').style.width= "50%"
+document.getElementById('Question').style.marginLeft = "15%"
+}
+if(counter==4){
+document.getElementById('Question').innerHTML = Q5.question;
+document.getElementById('ans1').innerHTML = Q5.answer1;
+document.getElementById('ans2').innerHTML = Q5.answer2;
+document.getElementById('ans3').innerHTML = Q5.answer3;
+document.getElementById('textarea').innerHTML = Q5.information
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+//document.getElementById('video').src = "images/video5.mp4";
+document.getElementById('image').src = "images/image5.png";
+document.getElementById('video').style.display = "none";
+document.getElementById('image').style.display = "block";
+document.getElementById('Question').style.width= "70%";
+document.getElementById('Question').style.marginLeft = "5%";
+document.getElementById('mediaHolder').style.width = "60%";
+document.getElementById('mediaHolder').style.marginLeft = "10%";
+document.getElementById('buttons').style.width = "28%";
+
+}
+if(counter==5){
+document.getElementById('Question').innerHTML = Q6.question;
+document.getElementById('ans1').innerHTML = Q6.answer1;
+document.getElementById('ans2').innerHTML = Q6.answer2;
+document.getElementById('ans3').innerHTML = Q6.answer3;
+document.getElementById('textarea').innerHTML = Q6.information
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+//document.getElementById('video').src = "images/video6.mp4";
+//document.getElementById('image').src = "images/image6.jpg";
+//document.getElementById('video').style.display = "none or block";
+//document.getElementById('image').style.display = "none or block";
+document.getElementById('Question').style.width= "50%";
+document.getElementById('Question').style.marginLeft = "15%";
+}
+if(counter==6){
+document.getElementById('Question').innerHTML = Q7.question;
+document.getElementById('ans1').innerHTML = Q7.answer1;
+document.getElementById('ans2').innerHTML = Q7.answer2;
+document.getElementById('ans3').innerHTML = Q7.answer3;
+document.getElementById('textarea').innerHTML = Q7.information
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+//document.getElementById('video').src = "images/video7.mp4";
+document.getElementById('image').src = "images/image7.png";
+document.getElementById('video').style.display = "none";
+document.getElementById('image').style.display = "block";
+document.getElementById('Question').style.height = "80px";
+document.getElementById('Question').style.zIndex = "330";
+document.getElementById('Question').style.width = "60%";
+document.getElementById('Question').style.marginLeft = "10%";
+document.getElementById('Question').style.fontSize = "20px"
+document.getElementById('mediaHolder').style.width = "20%";
+document.getElementById('mediaHolder').style.marginLeft = "30%";
+document.getElementById('kelvinZuigtPiemols').style.display = "block";
+document.getElementById('mediaHolder').style.width = "40%";
+document.getElementById('mediaHolder').style.marginLeft = "20%";
+}
+if(counter==7){
+document.getElementById('Question').innerHTML = Q8.question;
+document.getElementById('ans1').innerHTML = Q8.answer1;
+document.getElementById('ans2').innerHTML = Q8.answer2;
+document.getElementById('ans3').innerHTML = Q8.answer3;
+document.getElementById('textarea').innerHTML = Q8.information
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+//document.getElementById('video').src = "images/video8.mp4";
+document.getElementById('image').src = "images/noImage.png";
+document.getElementById('video').style.display = "none";
+document.getElementById('image').style.display = "block";
+document.getElementById('Question').style.height = "40px";
+document.getElementById('Question').style.width = "40%";
+document.getElementById('Question').style.marginLeft = "20%";
+document.getElementById('mediaHolder').style.width = "40%";
+document.getElementById('mediaHolder').style.marginLeft = "20%";
+document.getElementById('kelvinZuigtPiemols').style.display = "none";
+document.getElementById('mediaHolder').style.width = "50%";
+document.getElementById('mediaHolder').style.marginLeft = "15%";
+}
+if(counter==8){
+document.getElementById('Question').innerHTML = Q9.question;
+document.getElementById('ans1').innerHTML = Q9.answer1;
+document.getElementById('ans2').innerHTML = Q9.answer2;
+document.getElementById('ans3').innerHTML = Q9.answer3;
+document.getElementById('textarea').innerHTML = Q9.information
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+//document.getElementById('video').src = "images/video9.mp4";
+document.getElementById('image').src = "images/noImage.png";
+document.getElementById('video').style.display = "none";
+document.getElementById('image').style.display = "block";
+document.getElementById('mediaHolder').style.borderRadius = "0";
+
+}
+if(counter==9){
+document.getElementById('Question').innerHTML = Q10.question;
+document.getElementById('ans1').innerHTML = Q10.answer1;
+document.getElementById('ans2').innerHTML = Q10.answer2;
+document.getElementById('ans3').innerHTML = Q10.answer3;
+document.getElementById('textarea').innerHTML = Q10.information
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+//document.getElementById('video').src = "images/video10.mp4";
+document.getElementById('image').src = "images/noImage.png";
+document.getElementById('video').style.display = "none";
+document.getElementById('image').style.display = "block";
+document.getElementById('mediaHolder').borderRadius = "25px";
+
+
+}
+if(counter==10){
+document.getElementById('Question').innerHTML = Q11.question;
+document.getElementById('ans1').innerHTML = Q11.answer1;
+document.getElementById('ans2').innerHTML = Q11.answer2;
+document.getElementById('ans3').innerHTML = Q11.answer3;
+document.getElementById('textarea').innerHTML = Q11.information
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+//document.getElementById('video').src = "images/video11.mp4";
+document.getElementById('image').src = "images/noImage.png";
+document.getElementById('video').style.display = "none";
+document.getElementById('image').style.display = "block";
+}
+if(counter==11){
+document.getElementById('Question').innerHTML = Q12.question;
+document.getElementById('ans1').innerHTML = Q12.answer1;
+document.getElementById('ans2').innerHTML = Q12.answer2;
+document.getElementById('ans3').innerHTML = Q12.answer3;
+document.getElementById('textarea').innerHTML = Q12.information
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+//document.getElementById('video').src = "images/video12.mp4";
+document.getElementById('image').src = "images/image12.png";
+document.getElementById('video').style.display = "none";
+document.getElementById('image').style.display = "block";
+document.getElementById('mediaHolder').style.width = "40%";
+document.getElementById('mediaHolder').style.marginLeft = "20%";
+}
+if(counter==12){
+document.getElementById('Question').innerHTML = Q13.question;
+document.getElementById('ans1').innerHTML = Q13.answer1;
+document.getElementById('ans2').innerHTML = Q13.answer2;
+document.getElementById('ans3').innerHTML = Q13.answer3;
+document.getElementById('textarea').innerHTML = Q13.information
+document.getElementById('button1').style.backgroundColor = "white";
+document.getElementById('button2').style.backgroundColor = "white";
+document.getElementById('button3').style.backgroundColor = "white";
+document.getElementById('button1').style.color = "black";
+document.getElementById('button2').style.color = "black";
+document.getElementById('button3').style.color = "black";
+//document.getElementById('video').src = "images/video13.mp4";
+document.getElementById('image').src = "images/image13.png";
+document.getElementById('video').style.display = "none";
+document.getElementById('image').style.display = "block";
+
+document.getElementById('mediaHolder').style.borderRadius = "0";
+}
+if(counter==13){
+document.getElementById('Question').style.display="none";
+document.getElementById('ans1').style.display ="none";
+document.getElementById('ans2').style.display = "none";
+document.getElementById('ans3').style.display = "none";
+document.getElementById('textarea').innerHTML = Q14.information;
+document.getElementById('textarea').style.width = "60%";
+document.getElementById('textarea').style.height = '55%';
+document.getElementById('button1').style.display = "none";
+document.getElementById('button2').style.display = "none";
+document.getElementById('button3').style.display = "none";
+document.getElementById('button1').style.display = "none";
+document.getElementById('button2').style.display = "none";
+document.getElementById('button3').style.display = "none";
+//document.getElementById('video').src = "images/video13.mp4";
+document.getElementById('image').src = "images/image13.png";
+document.getElementById('video').style.display = "none";
+document.getElementById('image').style.display = "none";
+document.getElementById('nextButton').style.display ="none"
+document.getElementById('mediaHolder').style.borderRadius = "0";
+}
+}
+//	EINDE	//
+</script>
+<p id="copyright">This website is made by Dustin Joosen. copyright 2018 ©</p>
+</body>
+</html>
+<!--This website is made by Dustin Joosen. copyright 2018-2019 ©-->

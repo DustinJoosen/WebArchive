@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loader 2</title>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <style>
+*{
+ 	box-sizing: border-box;
+ }
+ body{
+ 	background-color: rgb(0,0,0);
+ }
+.stripe{
+ 	height: 10vh;
+ 	background-color: rgb(255,0,0);
+ 	width: 10px;
+ 	display: inline-block;
+ 	border-radius: 25px;
+ 	border:1px solid rgb(0,0,0);
+ 	color: rgb(255,0,0);  
+ 	animation: loader 2s infinite linear;
+ }
+#stripe0{
+	animation-delay: 0.2s
+}
+#stripe1{
+	animation-delay: 0.4s
+}
+#stripe2{
+	animation-delay: 0.6s
+}
+#stripe3{
+	animation-delay: 0.8s
+}
+#stripe4{
+	animation-delay: 1s
+}
+#stripe5{
+	animation-delay: 1.2s
+}
+#stripe6{
+	animation-delay: 1.4s
+}
+#stripe7{
+	animation-delay: 1.6s
+}
+#stripe8{
+	animation-delay: 1.8s
+}
+#stripe9{
+	animation-delay: 2s
+}
+
+.stripes{
+ 	margin-top: 45vh;
+ 	height: 10vh;
+ 	width: 137px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+@keyframes loader{
+ 	0%{
+ 		height: 10vh;
+ 	}
+ 	25%{
+ 		height: 7vh;
+ 	}
+ 	50%{
+ 		height: 1vh;
+ 	}
+ 	75%{
+ 		height: 7vh;
+ 	}
+ 	100%{
+ 		height: 10vh;
+	}
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="stripes">
+		<div class="stripe" id="stripe0">.</div>
+		<div class="stripe" id="stripe1">.</div>
+		<div class="stripe" id="stripe2">.</div>
+		<div class="stripe" id="stripe3">.</div>
+		<div class="stripe" id="stripe4">.</div>
+		<div class="stripe" id="stripe5">.</div>
+		<div class="stripe" id="stripe6">.</div>
+		<div class="stripe" id="stripe7">.</div>
+		<div class="stripe" id="stripe8">.</div>
+		<div class="stripe" id="stripe9">.</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

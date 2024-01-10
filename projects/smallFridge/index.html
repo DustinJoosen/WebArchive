@@ -1,0 +1,60 @@
+<!--This is a website made by Dustin joosen, copyright 2019 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="description"  content="A very random webpage, dedicated to the small fridges">	
+		<meta name="keywords" content="random, fridge, wtf, awesome">
+		<meta name="author" content=" Dustin Joosen">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Small Fridge</title>
+		<style>
+			*{
+				box-sizing: border-box;
+			}
+			body{
+				background-color: rgb(234,94,0);
+				overflow: hidden;
+			}
+			#Fridge{
+				min-width: 200px;
+				min-height: 200px;
+				width: 20vw;
+				height: 20vw;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 100px;
+				border:4px dashed transparent;
+				animation: spin 2s infinite linear;
+				transform-origin: 50% 50%;
+			}
+			#Text{
+				margin-top:0px;
+				font-size: 75px;
+				text-align: center;
+				font-family: 'arial';
+				-webkit-text-stroke:1px rgb(255,255,255);
+				-webkit-text-fill-color:transparent;
+			}
+			@keyframes spin{
+				0%{transform:rotate(0deg);}
+				10%{transform:rotate(5deg);}
+				20%{transform:rotate(10deg);}
+				25%{transform: rotate(12deg);}
+				30%{transform:rotate(10deg);}
+				40%{transform:rotate(5deg);}
+				50%{transform:rotate(0deg);}
+				60%{transform:rotate(-5deg);}
+				70%{transform:rotate(-10deg);}
+				75%{transform: rotate(-12deg);}
+				80%{transform:rotate(-10deg);}
+				90%{transform:rotate(-5deg);}
+				100%{transform:rotate(-0deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<p id="Text">Small Fridge</p>
+		<img src="fridge.png" id="Fridge"/>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bold Gravity</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="BoldScripting.js"></script>
+	<link rel="stylesheet" href="BoldStyling.css"/>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Syter"/>
+</head>
+<body>
+	<h1 id="text0">Bold<br/>Gravity</h1>
+	<h1 id="text1">How fast does a ball fall <br/>on each planet</h1>
+	<h1 id="NumberOfBalls">0 balls have fallen</h1>
+	<h1 id="PlanetInformation">Place: Earth<br/>gravity value: 9.8n/m<sup>2</sup><br/>Mass: 3.285 x 10^23 kg<br/>Radius: 2,439.7 km</h1>
+	<div id="buttons">
+		<button class="btn" type="button" value="2595" id="Mercury">Mercury</button>
+		<button class="btn" type="button" value="1091">Venus</button>
+		<button class="btn" type="button" value="980">Earth</button>
+		<button class="btn" type="button" value="5664">Luna</button>
+		<button class="btn" type="button" value="2595" id="Mars">Mars</button>
+		<button class="btn" type="button" value="388">Jupiter</button>
+		<button class="btn" type="button" value="914">Saturn</button>
+		<button class="btn" type="button" value="1067">Uranus</button>
+		<button class="btn" type="button" value="820">Neptune</button>
+		<button class="btn" type="button" value="18999">Pluto</button>
+		<button class="btn" type="button" value="" id="customizedPlanetButton">Customized</button>
+	</div>
+	<div id="balls">
+	</div>
+	<div id="planet">
+		<div id="stopline"></div>
+		<div id="holder"></div>
+	</div>
+	<div id="customizeButton">Customize</div>
+	<div id="customizeScreen">
+		<h1 id="text2">Customizing gravity</h1>
+		<div id="input">
+			<input type="number" value="30" id="customizedGV"/>
+			<p id="text3">N/M<sup>2</sup></p>
+			<input type="text" placeholder="Name of the planet" id="planetNameInput"/><br/><br/>
+			<div id="customizeProcessing">Customize</div>
+			<p id="ErrorMessage">Negative numbers are not allowed</p>
+		</div>
+		<div id="closeCustomizeScreen">X</div>
+	</div>
+</body>
+</html>
+<!--copyright syter 2019-->
