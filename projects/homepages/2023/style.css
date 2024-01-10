@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;   
+    font-family: tenorite, "sans-serif";
+}
+
+@font-face {
+    font-family: tenorite;
+    font-display: block;
+    src: url("lib/tenorite.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.homepage-title {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px gray;
+}
+
+/* Bubbles */
+.bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid gray;
+    position: fixed;
+    z-index: -1;
+}
+
+.bubble-huge {
+    width: 450px;
+    height: 450px;
+}
+.bubble-big {
+    width: 300px;
+    height: 300px;
+}
+.bubble-medium {
+    width: 200px;
+    height: 200px;
+}
+.bubble-small {
+    width: 150px;
+    height: 150px;
+}
+.bubble-extra-small {
+    width: 75px;
+    height: 75px;
+}
+
+#bubble-pink {
+    border: 3px solid rgb(163, 73, 164);
+    background-color: rgb(200, 191, 231);
+    top: -60px;
+    left: -40px;
+    box-shadow: 2px 2px 10px purple;
+}
+#bubble-yellow {
+    border: 3px solid rgb(255, 201, 14);
+    background-color: rgb(255, 242, 0);
+    bottom: 60px;
+    right: -200px;
+    box-shadow: 2px 2px 10px yellow;
+}
+#bubble-red {
+    border: 3px solid rgb(237, 28, 36);
+    background-color: rgb(255, 174, 201);
+    bottom: 110px;
+    left: 300px;
+    box-shadow: 2px 2px 10px red;
+}
+#bubble-green {
+    border: 3px solid rgb(34, 177, 76);
+    background-color: rgb(181, 230, 29);
+    top: 150px;
+    right: 450px;
+    box-shadow: 2px 2px 10px green;
+}
+#bubble-blue {
+    border: 3px solid rgb(0, 162, 232);
+    background-color: rgb(153, 217, 234);
+    top: -50px;
+    right: 120px;
+    box-shadow: 2px 2px 10px blue;
+}
+#bubble-orange {
+    border: 3px solid darkorange;
+    background-color: orange;
+    bottom: -220px;
+    right: 220px;
+    box-shadow: 2px 2px 10px orange;
+}
+
+/* Main links */
+.main-links {
+    width: 1400px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 5;
+    border-radius: 0px 25px 25px 0;
+    position: absolute;
+    top: 180px;
+    left: -650px;
+    transition: left 1s;
+    box-shadow: 2px 2px 10px gray;
+}
+.main-links.active {
+    left: 0;
+}
+
+.main-link {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-left: 55px;
+    margin-top: 25px;
+    border-radius: 10px;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 2px 2px 10px #333;
+}
+
+.main-link img {
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    border-radius: 10px;
+}
+
+.main-link:hover img {
+    transform: scale(1.08);
+}
+
+#toggle-main-links {
+    height: 200px;
+    width: 80px;
+    float: right;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+    background: tomato;
+    color: white;
+    border: none;
+    border-left: 2px solid red;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
+
+/* Hidden image */
+.bubble img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+/* Other links */
+#mis-link {
+    width: 60px;
+    height: 60px;
+    border-radius: 0 15px 15px 0;
+    position: fixed;
+    left: 0px;
+    bottom: 50px;
+    background-image: url('lib/img/mis.png');
+    background-size: 100%;
+}
+.secondary-links {
+    width: auto;
+    min-width: 10%;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    left: 150px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px 5px 0 0;
+    box-shadow: 2px 2px 10px white;
+}
+
+.sec-link {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 8px;
+    font-size: 20px;
+    background-color: #333;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 1px 1px 20px #333;
+}

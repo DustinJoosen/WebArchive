@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-primary-color: #5D3FD3;
+    --main-border-color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url("images/wallpaper.jpg");
+}
+
+.homepage-sign {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box;
+}
+
+.homepage-sign h1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: "Verdana";
+    font-weight: lighter;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-border-color);
+}
+
+.homepage-sign h1::after {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border: 2px solid var(--main-border-color);
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
+.image-link-deck {
+    width: 100%;
+    height: 600px;
+}
+
+.image-link {
+    width: 120px;
+    height: 120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position: absolute
+}
+
+/* Rain */
+.image-link:nth-child(1) {
+    left: 660px;
+    top: 510px;
+}
+
+/* Whatsapp */
+.image-link:nth-child(2) {
+    left: 700px;
+    top: 220px;
+}
+
+/* Youtube */
+.image-link:nth-child(3) {
+    left: 1200px;
+    top: 150px;
+}
+
+/* Reddit */
+.image-link:nth-child(4) {
+    left: 250px;
+    top: 560px;
+}
+
+/* Netflix */
+.image-link:nth-child(5) {
+    right: 200px;
+    top: 480px;
+}
+
+.image-link:nth-child(6) {
+    left:400px;
+    top: 330px;
+}
+
+.image-link:nth-child(7) {
+    right: 400px;
+    top: 350px;
+}
+
+/* Outlook */
+.image-link:nth-child(8) {
+    left: 120px;
+    top: 250px;
+}
+
+.image-link a img {
+    width: 100px;
+    display: block;
+}
+
+.extra-links {
+    width: 60%;
+    height: 60vh;
+    background: var(--main-primary-color);
+    border: 4px solid #4932a6;
+    border-radius: 25px;
+    position: absolute;
+    left: 20%;
+    top: 20vh;
+    opacity: 0.98;
+    transition: 0.5s;
+}
+
+.extra-links-header {
+    border-bottom: 4px solid #4932a6;
+}
+
+.extra-links-header h3 {
+    text-align: center;
+    font-size: 25px;
+    font-family: "Verdana";
+    font-weight: lighter;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-border-color);
+}
+
+.extra-links-header button {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    background: transparent;
+    border: none;
+    color: tomato;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+.extra-links-body-ul li {
+    list-style-type: none;
+    color: white;
+}
+
+.wall-sticker button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 8px;
+    background-color: var(--main-primary-color);
+    border: 2px solid #4932a6;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.keyframe-homepage-flip {
+    animation: homepage-flip 2s ease-in-out;
+}
+
+@keyframes homepage-flip {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    10% {
+        transform: rotateZ(20deg);
+    }
+    30% {
+        transform: rotateZ(-20deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

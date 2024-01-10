@@ -1,0 +1,181 @@
+﻿<!-- version 3.7.7 -->
+<!DOCTYPE html>
+<html lang="du">
+<head>
+<title>homepage</title>
+<meta charset ="UTF-8">
+<meta name="description"  content="personal homepage">	
+<meta name="keywords" content="homepage, bookmarks">
+<meta name="author" content=" Dustin Joosen">
+<meta http-equiv="refresh" content="600">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.page-container{		
+	color:rgba(255,255,0,1);
+	font-family: 'verdana';
+}
+.textarea	{
+	border:2px solid transparent;
+	background-color:white;
+	color:red;
+	width:97%;
+	height:110px;
+	font-size:15px;
+	font-family:comic sans MS;
+	border-radius:25px;
+	padding: 0 0 2px 15px;
+}
+.school{
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	width:110px;
+	background-color:white;
+	color:red;
+	padding:14px 10px;
+	border: 2px solid red;
+	border-radius:50px;
+	cursor:pointer;
+	box-sizing:border-box;
+	margin-right:70px;
+	list-style-type: none;
+}
+a.school:hover, active{
+	background-color: red;
+	color:white;
+}
+body{	
+	background: url('https://www.desktopbackground.org/p/2012/03/21/362131_1906x1080px-blank-wallpapers-silver-blue_1906x1080_h.jpg');
+}
+img	{
+	margin-right:40px;
+	margin-left:40px;
+}
+.rgbButton{
+	width: 20%;
+	height: 40px;
+	border:2px solid black;
+	background-color: black;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 90px;
+	border-radius: 0 0 50% 50%;
+	color: white;
+	text-align: center;
+	padding-bottom: 10px;
+	transition: 1s;
+	overflow: hidden;
+	font-family: 'arial';
+	min-width: 200px;
+}
+.rgbMakerHolder{
+	width: 90%;
+	margin-left: 5%;
+	height: 420px;
+	background-color: grey;
+	transition: 1s;
+	border-radius: 15px
+}
+input[type="range"]{
+	width: 60%;
+	margin-left: 10%;
+	border:2px solid white;
+}
+input[type="range"]:nth-child(1){
+	margin-top: 35px;
+}
+.color{
+	width: 70%;
+	min-height:170px;
+	background-color: red; 
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+}
+#homepageTitle{
+	font-size: 30px;
+	border:2px solid black;
+	background-color: rgb(0,0,0);
+	position: absolute;
+	top: 0;
+	margin-left: 30%;
+	width: 40%;
+	height: 100px;
+}
+h1 {
+  font-size: 50px;
+  font-family: 'arial';
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke:0.5px yellow;
+}
+hr{
+	color: yellow;
+}
+</style>
+</head>
+<body>
+<div class="rgbButton" id="rgbButton" onclick="rgb()">
+	<p id="bullshitId">rgb calculator</p>
+	<div class="rgbMakerHolder" onclick="getAwayRGB()" id="rgbMakerHolder">
+		<input onclick="getAwayRGB()" type="range" id="r" min="0" max="255" value="0"/><p style="display:inline-block; padding-left: 15px">R</p>
+		<input onclick="getAwayRGB()" type="range" id="g" min="0" max="255" value="0"/><p style="display:inline-block; padding-left: 15px">G</p>
+		<input onclick="getAwayRGB()" type="range" id="b" min="0" max="255" value="0"/><p style="display:inline-block; padding-left: 15px">B</p>
+		<div onclick="getAwayRGB()" class="color" id="color"></div>
+		<p id="code" style="text-align: center;color: white">255,255,255</p>
+	</div>
+</div>
+<div class="page-container">
+<hr>
+<H1 title="homepage" style="text-align:center">Homepage</H1>
+<hr>
+<H2 title="Private bookmarks"> Private Bookmarks</h2>	
+<a title="facebook" href="https://www.facebook.com/"><img src="file:///C:/Users/dusti_j3jqk0i/Desktop/images/facebook.png" alt="facebook" max-width="100%"  width="90px" height="90px"></a>													
+<a title="gmail" href="https://mail.google.com/mail/u/0/#inbox"><img src="file:///C:/Users/dusti_j3jqk0i/Desktop/images/gmail.png" max-width="100%" width="90px" height="90px" alt="gmail"></a>																		
+<a title="youtube" href="https://www.youtube.com/?gl=N\&hl=nl"><img src="file:///C:/Users/dusti_j3jqk0i/Desktop/images/youtube.png" alt="youtube" max-width="100%" width="90px" height="90px"></a>																	
+<a title="twitter" href="https://twitter.com/" ><img src="file:///C:/Users/dusti_j3jqk0i/Desktop/images/twitter.png" max-width="100%" width="90px" height="90px" alt="twitter"></a>																
+<a title="whatsapp" href="https://web.whatsapp.com/"><img src="file:///C:/Users/dusti_j3jqk0i/Desktop/images/whatsapp.png" max-width="100%" width="90px" height="90px" alt="whatsapp"></a>																			
+<a title="spotify" href="https://open.spotify.com/browse/featured?_ga=2.183110310.1283555466.1530822087-1568498972.1530822087"><img src="file:///C:/Users/dusti_j3jqk0i/Desktop/images/spotify.png" alt="spotify" max-width="100%" width="90px" height="90px"></a>   
+<a title="instagram" href="https://www.instagram.com/"><img src="file:///C:/Users/dusti_j3jqk0i/Desktop/images/instagram.png" max-width="100%" width="90px" height="90px" alt="instagram"/></a>
+<hr>
+<H2 title="school bookmarks">School Bookmarks</H2>
+<a title="Schoolsite" class="school"href="https://dedijk.atlascollege.nl/Leerlingen/Examen/PTA">Schoolsite </a>										
+<a title="magister" class="school"href="https://atlas.magister.net/magister/#/vandaag">Magister </a>		
+<a title="Zermelo" class="school"href="https://dedijk.zportal.nl/api/v2/oauth">Zermelo</a>															
+<a title="google docs" class="school" href="https://www.google.nl/intl/nl/docs/about/">google docs</a>		
+<a title="classroom" class="school"href="https://classroom.google.com/u/1/h">Classroom</a>
+<a title="usb required!, menu to my projects." class="school" href="file:///E:/Programming/smallProjects/pureCSS/navBar.htm">nav bar</a>
+
+<script>
+	var y = 1;
+	function rgb(){
+		//here y is 0
+		y++;
+		//here y is 1
+		document.getElementById('rgbButton').style.height = "480px";
+		document.getElementById('rgbButton').style.borderRadius = "0 0 15px 15px";
+	}
+	getColor();
+	function getColor(){
+		var r = document.getElementById('r').value;
+		var g = document.getElementById('g').value;
+		var b = document.getElementById('b').value;
+		setColor(r,g,b)
+	}
+	function setColor(r,g,b){
+		setTimeout(getColor,10);
+		var rgb = "rgb(" + r + "," + g + "," + b + ")";
+		document.getElementById('color').style.backgroundColor = rgb;
+		document.getElementById('code').innerHTML = rgb;
+	}
+	function getAwayRGB(){
+		//here y = 1;
+		y=y-1;
+		document.getElementById('rgbButton').style.height = "40px";		
+		document.getElementById('rgbButton').style.borderRadius = "0 0 50% 50%";		
+	}
+</script>
+</body>
+</html>
+<!--this is a website made by Dustin joosen. 2018-2019 © -->

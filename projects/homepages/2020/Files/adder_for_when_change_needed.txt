@@ -1,0 +1,51 @@
+from tkinter import *
+
+root = Tk()
+root.title("Inserting Homework")
+
+added = ""
+
+#retrieving the data#
+def write_data():
+	subject = subjectField.get()
+	homework = homeworkField.get()
+
+	syntax = "{}:\"{}\",\n".format(subject, homework)
+	
+	global added
+	added += syntax
+
+	subjectField.delete(0, END)
+	subjectField.insert(0,"")
+
+	homeworkField.delete(0, END)
+	homeworkField.insert(0,"")
+
+	subjectField.focus_set()
+
+#editing it in the file#
+def save_list():
+	global added
+
+	f = open("Homework.js",'w')
+	f.write("var Homework = {\n" + added + "}")
+	f.close()
+
+	added = ""
+
+#Making the widgets and displaying them#
+subjectLabel = Label(root, text="Subject:").grid(row=0, column=0)
+homeworkLabel = Label(root, text="Homework:").grid(row=1, column=0)
+
+subjectField = Entry(root)
+subjectField.grid(row=0, column=1)
+
+homeworkField = Entry(root)
+homeworkField.grid(row=1, column=1)
+
+#Making the button widget and retrieving#
+saveButton = Button(root, text="Save list", command=save_list ,width=20).grid(row=2,column=0)
+addButton = Button(root, text="Add To list", command=write_data, width=20).grid(row=2,column=1)
+
+root.mainloop()
+#Homework adder v2.1.2
